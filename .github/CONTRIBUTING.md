@@ -58,6 +58,7 @@ Thank you for contributing to the Lumy widget community!
      - Brief description
      - Screenshot
    - Organization maintainers will review and add it to the gallery
+   - The widget will appear in the [Available Widgets table](https://github.com/lumy-widgets) on the organization profile
 
 #### Option B: Transfer Repository to Organization (For Trusted Contributors)
 
