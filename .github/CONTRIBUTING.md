@@ -41,7 +41,7 @@ Thank you for contributing to the Lumy widget community!
    git push -u origin main
    ```
 
-3. **Include required files** in your repository:
+3. **Include required files and request listing**:
    - ✅ Source code (all Kotlin files)
    - ✅ `README.md` with:
      - Widget description and features
@@ -49,11 +49,9 @@ Thank you for contributing to the Lumy widget community!
      - Build instructions
      - Screenshots or demo images
    - ✅ `widget-metadata.json`
-   - ✅ License file (MIT recommended)
    - ✅ `.gitignore` (from template)
-
-4. **Request to add to organization**:
-   - Open an issue at https://github.com/lumy-widgets/.github/issues
+   
+   Then **open an issue** at https://github.com/lumy-widgets/.github/issues to request your widget be added to the organization gallery:
    - Title: "Add widget: [Your Widget Name]"
    - Include:
      - Link to your repository
@@ -98,8 +96,7 @@ If you're already a member of the `lumy-widgets` organization:
 - **Code Quality**: Follow Kotlin best practices
 - **Documentation**: Include clear README and comments
 - **Testing**: Test your widget before sharing
-- **License**: Include a license file (MIT recommended)
-- **Naming**: Use clear, descriptive names
+- **Naming**: Use clear, descriptive names (format: `lumy-widget-{name}`)
 
 ## Questions?
 
