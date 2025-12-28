@@ -26,8 +26,8 @@ When a contributor opens an issue requesting their widget be added to the galler
    git pull origin main
    ```
 
-2. **Edit `.github/profile/README.md`**:
-   - Open `.github/profile/README.md`
+2. **Edit `profile/README.md`**:
+   - Open `profile/README.md`
    - Find the "Available Widgets" table (around line 9)
    - Add a new row with the widget information:
 
@@ -46,7 +46,7 @@ When a contributor opens an issue requesting their widget be added to the galler
 
 3. **Commit and push**:
    ```bash
-   git add .github/profile/README.md
+   git add profile/README.md
    git commit -m "Add widget: [Widget Name]"
    git push origin main
    ```
@@ -101,4 +101,3 @@ When adding to the table, use this format:
    - Link format: `[Widget Name](https://github.com/username/lumy-widget-NAME)`
 
 Both are valid - choose based on whether you want centralized management or community ownership.
-

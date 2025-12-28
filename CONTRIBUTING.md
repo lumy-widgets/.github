@@ -16,7 +16,7 @@ Thank you for contributing to the Lumy widget community!
 ### 1. Create Your Widget
 
 - Start with the [hello-world template](https://github.com/lumy-widgets/lumy-widget-hello-world)
-- Follow the [development guide](DEVELOPMENT_GUIDE.md)
+- Follow the [development guide](https://github.com/lumy-widgets/.github/blob/main/DEVELOPMENT_GUIDE.md)
 - Test thoroughly before sharing
 
 ### 2. Share Your Widget
@@ -73,7 +73,7 @@ If you're already a member of the `lumy-widgets` organization:
 
 3. **Submit PR to organization README**:
    - Fork the `.github` repository
-   - Edit `.github/profile/README.md`
+   - Edit `profile/README.md`
    - Add your widget to the "Available Widgets" table
    - Submit a pull request
 
@@ -102,4 +102,3 @@ If you're already a member of the `lumy-widgets` organization:
 ## Questions?
 
 Open an issue in the [organization discussions](https://github.com/orgs/lumy-widgets/discussions) or contact the maintainers.
-
