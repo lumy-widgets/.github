@@ -8,7 +8,7 @@ Browse our collection of community-created widgets:
 
 | Widget | Description | Author | Status |
 |--------|-------------|--------|--------|
-| [Hello World](lumy-widget-hello-world) | Minimal template widget | Lumy Team | ✅ Template |
+| [Hello World](https://github.com/lumy-widgets/lumy-widget-hello-world) | Minimal template widget | Lumy Team | ✅ Template |
 
 *More widgets coming soon!*
 
@@ -57,7 +57,7 @@ Browse our collection of community-created widgets:
 We welcome contributions! To add your widget:
 
 1. Create a new repository in this organization
-2. Base it on the [hello-world template](lumy-widget-hello-world)
+2. Base it on the [hello-world template](https://github.com/lumy-widgets/lumy-widget-hello-world)
 3. Follow our [contribution guidelines](https://github.com/lumy-widgets/.github/blob/main/CONTRIBUTING.md)
 4. Submit a pull request to update this README
 
