@@ -10,35 +10,45 @@ A community-driven collection of custom widgets for [Lumy](https://lumy.tv) digi
 
 Browse our collection of community-created widgets:
 
-| Widget | Description | Author | Status |
-|--------|-------------|--------|--------|
-| [Hello World](https://github.com/lumy-widgets/lumy-widget-hello-world) | Minimal template widget | Lumy Team | ✅ Template |
+| Widget | Description | Author | Download |
+|--------|-------------|--------|----------|
+| [Hello World](https://github.com/lumy-widgets/lumy-widget-hello-world) | Minimal template widget | Lumy Team | 🔨 Template |
 
 *More widgets coming soon!*
 
+**Legend:**
+- 📥 **Pre-built APK available** - Download and use immediately (no coding required)
+- 🔨 **Source only** - Requires Android Studio and build tools (for developers)
+
 ## 🚀 Getting Started
 
-### For Users
+### For Users (Non-Technical)
+
+**Want to use widgets without coding?** Download pre-built APKs directly:
 
 1. **Browse widgets** in this organization
-2. **Clone** a widget repository:
-   ```bash
-   git clone https://github.com/lumy-widgets/widget-name.git
-   ```
-3. **Build the APK**:
-   ```bash
-   cd widget-name
-   ./gradlew assembleRelease
-   ```
-4. **Upload to Lumy Manager**:
+2. **Download the APK**:
+   - Go to the widget's repository (e.g., [Hello World](https://github.com/lumy-widgets/lumy-widget-hello-world))
+   - Click on **Releases** (right sidebar)
+   - Download the latest `.apk` file
+   
+   > 💡 **Note:** If no release exists, request a build in the widget's Issues tab.
+
+3. **Upload to Lumy Manager**:
    - Go to Custom Widgets section
    - Click "Upload Widget"
-   - Select the APK from `app/build/outputs/apk/release/app-release.apk`
+   - Select the downloaded APK file
    - Fill in widget details and upload
+
+**No programming or build tools required!** ✨
+
+---
 
 ### For Developers
 
 **🎉 NEW: Test widgets locally before uploading!** No backend access needed.
+
+#### Create Your Own Widget
 
 1. **Start with the template**:
    ```bash
@@ -60,13 +70,26 @@ Browse our collection of community-created widgets:
    ./gradlew :app:assembleRelease
    ```
 
-4. **Follow the [Development Guide](https://github.com/lumy-widgets/.github/blob/main/DEVELOPMENT_GUIDE.md)**
+4. **Create a Release** with the built APK:
+   - Tag your version (e.g., `v1.0.0`)
+   - Create GitHub Release
+   - Upload the APK file from `app/build/outputs/apk/release/`
+   - **This allows non-technical users to download and use your widget!**
 
 5. **Share your widget**:
    - Create a new repository in this organization
    - Submit a pull request to add it to the list above
 
 **⚡ Pro tip:** Use the test-app for rapid development (40x faster than build-upload-test cycle)
+
+#### Build APK for Others (Contributors)
+
+Help non-technical users by building widgets:
+
+1. Clone any widget repository
+2. Build: `./gradlew :app:assembleRelease`
+3. Create a GitHub Release with the APK file
+4. Non-technical users can now download without building!
 
 ## 📚 Resources
 

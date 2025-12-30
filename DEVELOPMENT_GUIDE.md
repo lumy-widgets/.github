@@ -142,14 +142,39 @@ After building:
 
 ## Sharing Your Widget
 
+### Creating Releases for Users
+
+**Important:** Create GitHub Releases with pre-built APKs so non-technical users can download your widget without build tools.
+
+1. **Build your APK:**
+   ```bash
+   ./gradlew :app:assembleRelease
+   ```
+
+2. **Tag and create release:**
+   ```bash
+   git tag -a v1.0.0 -m "Initial release"
+   git push origin v1.0.0
+   ```
+
+3. **On GitHub:**
+   - Go to Releases → Create new release
+   - Select tag `v1.0.0`
+   - Upload `app/build/outputs/apk/release/app-release.apk`
+   - Add release notes
+   - Publish
+
+### Repository Setup
+
 1. Create a repository in the `lumy-widgets` organization
 2. Include:
    - Source code
    - `README.md` with description
    - `widget-metadata.json`
    - Screenshots
+   - **GitHub Release with APK file**
 
 3. Submit PR to add to organization README
 
-For complete documentation, see the [full development guide](https://github.com/lumy-widgets/lumy-widget-hello-world/blob/main/README.md).
+For complete documentation, see the [full development guide](https://github.com/lumy-widgets/lumy-widget-hello-world/blob/main/README.md) and [Contributing Guide](https://github.com/lumy-widgets/.github/blob/main/CONTRIBUTING.md).
 

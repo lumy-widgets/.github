@@ -129,6 +129,39 @@ Only upload your widget APK to Lumy when:
 - ✅ Handles invalid config gracefully
 - ✅ Performance is acceptable
 
+### Creating Releases for Non-Technical Users
+
+**Important:** After building your widget, create a GitHub Release with the APK file so non-technical users can download and use your widget without build tools.
+
+**Steps to create a release:**
+
+1. **Build your APK:**
+   ```bash
+   ./gradlew :app:assembleRelease
+   ```
+   APK location: `app/build/outputs/apk/release/app-release.apk`
+
+2. **Tag your version:**
+   ```bash
+   git tag -a v1.0.0 -m "Initial release"
+   git push origin v1.0.0
+   ```
+
+3. **Create GitHub Release:**
+   - Go to your repository on GitHub
+   - Click "Releases" → "Create a new release"
+   - Select your tag (e.g., `v1.0.0`)
+   - Title: "Version 1.0.0" or descriptive name
+   - Description: What's new, features, configuration options
+   - **Attach the APK file** (`app-release.apk`)
+   - Publish release
+
+4. **Update your README:**
+   - Add a badge or link to latest release
+   - Include download instructions for users
+
+**Why this matters:** Non-technical users (signage operators, content managers) need widgets but can't build from source. Providing pre-built APKs makes your widget accessible to everyone!
+
 ### Debugging Tips
 
 **View logs while testing:**
@@ -182,11 +215,13 @@ adb logcat | grep -E "HelloWorldWidget|YourWidgetName"
      - Screenshots or demo images
    - ✅ `widget-metadata.json`
    - ✅ `.gitignore` (from template)
+   - ✅ **GitHub Release with pre-built APK** (so non-technical users can download)
    
    Then **open an issue** at https://github.com/lumy-widgets/.github/issues to request your widget be added to the organization gallery:
    - Title: "Add widget: [Your Widget Name]"
    - Include:
      - Link to your repository
+     - Link to your latest Release (with APK)
      - Brief description
      - Screenshot
    - Organization maintainers will review and add it to the gallery
