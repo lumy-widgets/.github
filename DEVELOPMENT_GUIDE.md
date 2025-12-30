@@ -35,7 +35,18 @@ git clone https://github.com/lumy-widgets/lumy-widget-hello-world.git my-widget
 cd my-widget
 ```
 
-### 2. Update Project Configuration
+### 2. Test Locally First
+
+**Before making any changes, run the preview app:**
+
+1. Open the project in Android Studio
+2. Select **`test-app`** from the run configuration dropdown
+3. Click Run (▶️)
+4. See the hello-world widget in action!
+
+This preview app is your **development environment**. You'll use it to test your widget locally before uploading to Lumy.
+
+### 3. Update Project Configuration
 
 Edit `app/build.gradle.kts`:
 
@@ -90,13 +101,40 @@ override fun getConfigSchema(): String? {
 
 ## Building and Testing
 
+### Local Testing (Recommended)
+
+**Use the built-in preview app for rapid development:**
+
+1. **Run test-app:**
+   - Select `test-app` from run configurations
+   - Click Run
+   - Widget renders instantly
+
+2. **Make changes:**
+   - Edit your widget code
+   - Hot reload (Ctrl+F9 / Cmd+R)
+   - See updates immediately
+
+3. **Test configurations:**
+   - Modify values in the bottom panel
+   - Test edge cases (empty values, invalid inputs)
+   - Verify error handling
+
+**See `test-app/VISUAL_GUIDE.md` for detailed instructions.**
+
 ### Build APK
 
+Once your widget works perfectly in the preview:
+
 ```bash
-./gradlew assembleRelease
+./gradlew :app:assembleRelease
 ```
 
-### Test Locally
+**Note:** Use `:app:assembleRelease` to build only the widget, not the test-app.
+
+### Test in Lumy
+
+After building:
 
 1. Install APK on Android device/emulator
 2. Test widget rendering
