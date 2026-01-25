@@ -7,7 +7,7 @@ Thank you for contributing to the Lumy widget community!
 **Easiest way:**
 1. Create a public repository on your GitHub account named `lumy-widget-{name}`
 2. Push your widget code with a README and `widget-metadata.json`
-3. Open an issue at https://github.com/lumy-widgets/.github/issues to request it be added to the gallery
+3. Open an issue at https://github.com/lumy-signage/.github/issues to request it be added to the gallery
 
 **See detailed steps below ↓**
 
@@ -15,7 +15,7 @@ Thank you for contributing to the Lumy widget community!
 
 ### 1. Create Your Widget
 
-- Start with the [hello-world template](https://github.com/lumy-widgets/lumy-widget-hello-world)
+- Start with the [hello-world template](https://github.com/lumy-signage/lumy-widget-hello-world)
 - Follow the [development guide](DEVELOPMENT_GUIDE.md)
 - Test thoroughly before sharing
 
@@ -29,7 +29,7 @@ As a contributor, you **do NOT need access** to the Lumy codebase or backend. Th
 
 1. **Clone the hello-world template:**
    ```bash
-   git clone https://github.com/lumy-widgets/lumy-widget-hello-world.git my-widget
+   git clone https://github.com/lumy-signage/lumy-widget-hello-world.git my-widget
    cd my-widget
    ```
 
@@ -181,8 +181,8 @@ adb logcat | grep -E "HelloWorldWidget|YourWidgetName"
 ### Need Help?
 
 - 📖 Check [DEVELOPMENT_GUIDE.md](DEVELOPMENT_GUIDE.md)
-- 💬 Ask in [GitHub Discussions](https://github.com/orgs/lumy-widgets/discussions)
-- 🐛 Report issues: https://github.com/lumy-widgets/.github/issues
+- 💬 Ask in [GitHub Discussions](https://github.com/orgs/lumy-signage/discussions)
+- 🐛 Report issues: https://github.com/lumy-signage/.github/issues
 
 ### 2. Share Your Widget
 
@@ -217,7 +217,7 @@ adb logcat | grep -E "HelloWorldWidget|YourWidgetName"
    - ✅ `.gitignore` (from template)
    - ✅ **GitHub Release with pre-built APK** (so non-technical users can download)
    
-   Then **open an issue** at https://github.com/lumy-widgets/.github/issues to request your widget be added to the organization gallery:
+   Then **open an issue** at https://github.com/lumy-signage/.github/issues to request your widget be added to the organization gallery:
    - Title: "Add widget: [Your Widget Name]"
    - Include:
      - Link to your repository
@@ -225,15 +225,15 @@ adb logcat | grep -E "HelloWorldWidget|YourWidgetName"
      - Brief description
      - Screenshot
    - Organization maintainers will review and add it to the gallery
-   - The widget will appear in the [Available Widgets table](https://github.com/lumy-widgets) on the organization profile
+   - The widget will appear in the [Available Widgets table](https://github.com/lumy-signage) on the organization profile
 
 #### Option B: Transfer Repository to Organization (For Trusted Contributors)
 
-If you're already a member of the `lumy-widgets` organization:
+If you're already a member of the `lumy-signage` organization:
 
 1. **Create repository** in the organization:
-   - Go to https://github.com/organizations/lumy-widgets/repositories/new
-   - Or use GitHub CLI: `gh repo create lumy-widgets/lumy-widget-NAME --public`
+   - Go to https://github.com/organizations/lumy-signage/repositories/new
+   - Or use GitHub CLI: `gh repo create lumy-signage/lumy-widget-NAME --public`
    - Repository name: `lumy-widget-{your-widget-name}`
 
 2. **Push your code** (same as Option A, step 2)
@@ -247,7 +247,7 @@ If you're already a member of the `lumy-widgets` organization:
 #### Option C: Fork and Customize Template
 
 1. **Fork the template**:
-   - Go to https://github.com/lumy-widgets/lumy-widget-hello-world
+   - Go to https://github.com/lumy-signage/lumy-widget-hello-world
    - Click "Fork" → Create a new fork
    - Choose your account or the organization (if you have access)
 
@@ -268,5 +268,5 @@ If you're already a member of the `lumy-widgets` organization:
 
 ## Questions?
 
-Open an issue in the [organization discussions](https://github.com/orgs/lumy-widgets/discussions) or contact the maintainers.
+Open an issue in the [organization discussions](https://github.com/orgs/lumy-signage/discussions) or contact the maintainers.
 

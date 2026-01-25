@@ -8,7 +8,7 @@ When a contributor opens an issue requesting their widget be added to the galler
 
 ### Step 1: Review the Request
 
-1. Go to the issue: https://github.com/lumy-widgets/.github/issues
+1. Go to the issue: https://github.com/lumy-signage/.github/issues
 2. Check that the widget includes:
    - ✅ Public repository link
    - ✅ Description
@@ -20,7 +20,7 @@ When a contributor opens an issue requesting their widget be added to the galler
 
 1. **Clone or update the `.github` repository**:
    ```bash
-   git clone https://github.com/lumy-widgets/.github.git
+   git clone https://github.com/lumy-signage/.github.git
    cd .github
    # Or if already cloned:
    git pull origin main
@@ -34,7 +34,7 @@ When a contributor opens an issue requesting their widget be added to the galler
    ```markdown
    | Widget | Description | Author | Status |
    |--------|-------------|--------|--------|
-   | [Hello World](lumy-widget-hello-world) | Minimal template widget | Lumy Team | ✅ Template |
+   | [Widget Template](https://github.com/lumy-signage/lumy-widget-template) | Complete template with setup scripts and test app | Lumy Team | ✅ Template |
    | [Widget Name](repository-link) | Widget description | Author Name | ✅ Active |
    ```
 
@@ -57,12 +57,12 @@ If the widget repository is in the contributor's personal account and you want i
 
 1. **Ask the contributor to transfer the repository**:
    - They go to: Repository Settings → Danger Zone → Transfer ownership
-   - Transfer to: `lumy-widgets` organization
+   - Transfer to: `lumy-signage` organization
    - Or you can add them as a collaborator to the organization repo
 
 2. **If creating in organization directly**:
    ```bash
-   gh repo create lumy-widgets/lumy-widget-NAME --public
+   gh repo create lumy-signage/lumy-widget-NAME --public
    ```
 
 ### Step 4: Update the Issue
@@ -72,7 +72,7 @@ If the widget repository is in the contributor's personal account and you want i
    ✅ Widget added to gallery!
    
    The widget has been added to the organization profile. 
-   It will appear at: https://github.com/lumy-widgets
+   It will appear at: https://github.com/lumy-signage
    ```
 
 2. Close the issue
@@ -93,7 +93,7 @@ When adding to the table, use this format:
 ## Repository Location Options
 
 1. **In Organization** (Recommended):
-   - Repository: `lumy-widgets/lumy-widget-NAME`
+   - Repository: `lumy-signage/lumy-widget-NAME`
    - Link format: `[Widget Name](lumy-widget-NAME)`
 
 2. **In Contributor's Account**:

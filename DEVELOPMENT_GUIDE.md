@@ -31,31 +31,61 @@ Custom widgets allow you to extend Lumy with your own interactive components usi
 ### 1. Clone the Template
 
 ```bash
-git clone https://github.com/lumy-widgets/lumy-widget-hello-world.git my-widget
+git clone https://github.com/lumy-signage/lumy-widget-template.git my-widget
 cd my-widget
 ```
 
-### 2. Test Locally First
+### 2. Setup Android SDK
 
-**Before making any changes, run the preview app:**
+**Quick Setup (Automatic):**
+```bash
+# Windows (PowerShell or CMD)
+.\setup-android-sdk.bat
+
+# Linux/Mac
+chmod +x setup-android-sdk.sh
+./setup-android-sdk.sh
+```
+
+This automatically detects and configures your Android SDK location.
+
+**Manual Setup (if needed):**
+```bash
+# Copy example file
+cp local.properties.example local.properties
+
+# Edit local.properties and set your SDK path:
+# Windows: sdk.dir=C\:\\Users\\YourUsername\\AppData\\Local\\Android\\Sdk
+# macOS: sdk.dir=/Users/YourUsername/Library/Android/sdk
+# Linux: sdk.dir=/home/YourUsername/Android/Sdk
+```
+
+### 3. Test Locally First
+
+**Before making any changes, run the test app:**
 
 1. Open the project in Android Studio
 2. Select **`test-app`** from the run configuration dropdown
 3. Click Run (▶️)
-4. See the hello-world widget in action!
+4. See the widget in action instantly!
 
-This preview app is your **development environment**. You'll use it to test your widget locally before uploading to Lumy.
+This test app is your **development environment**. You'll use it to test your widget locally before uploading to Lumy.
 
-### 3. Update Project Configuration
+### 4. Update Project Configuration
 
 Edit `app/build.gradle.kts`:
 
-- Change `namespace` and `applicationId` to your package
+- Change `namespace` to your package
 - Update `versionName` and `versionCode`
 
-### 3. Rename and Customize
+Edit `widget-metadata.json`:
 
-- Rename `HelloWorldWidget.kt` to your widget name
+- Update `name`, `description`, `author`
+- Update `className` to match your widget class
+
+### 5. Rename and Customize
+
+- Rename widget class to your widget name
 - Update package structure
 - Implement your widget logic
 
@@ -88,10 +118,17 @@ override fun getConfigSchema(): String? {
     {
       "type": "object",
       "properties": {
-        "option1": {
+        "backgroundColor": {
           "type": "string",
-          "title": "Option 1",
-          "default": "value"
+          "title": "Background Color",
+          "format": "color",
+          "default": "#000000"
+        },
+        "refreshInterval": {
+          "type": "integer",
+          "title": "Refresh Interval (seconds)",
+          "minimum": 10,
+          "default": 60
         }
       }
     }
@@ -103,42 +140,61 @@ override fun getConfigSchema(): String? {
 
 ### Local Testing (Recommended)
 
-**Use the built-in preview app for rapid development:**
+**Use the built-in test app for rapid development:**
 
 1. **Run test-app:**
    - Select `test-app` from run configurations
    - Click Run
    - Widget renders instantly
+   - **40x faster than build-upload-test cycle!**
 
 2. **Make changes:**
    - Edit your widget code
    - Hot reload (Ctrl+F9 / Cmd+R)
-   - See updates immediately
+   - See updates in ~15 seconds
 
 3. **Test configurations:**
-   - Modify values in the bottom panel
+   - Modify values in MainActivity
    - Test edge cases (empty values, invalid inputs)
    - Verify error handling
 
-**See `test-app/VISUAL_GUIDE.md` for detailed instructions.**
+**See `test-app/README.md` for detailed instructions.**
 
 ### Build APK
 
-Once your widget works perfectly in the preview:
+**Using Build Scripts (Easiest):**
 
 ```bash
-./gradlew :app:assembleRelease
+# Windows
+.\build-widget.bat
+
+# Linux/Mac
+chmod +x build-widget.sh
+./build-widget.sh
 ```
 
-**Note:** Use `:app:assembleRelease` to build only the widget, not the test-app.
+This script will:
+- Build the release APK
+- Copy it with proper naming (`widget-name-vX.X.X.apk`)
+- Display file size and configuration
+- Show upload instructions
+
+**Manual Build:**
+
+```bash
+./gradlew :test-app:assembleRelease
+```
+
+APK location: `test-app/build/outputs/apk/release/test-app-release.apk`
 
 ### Test in Lumy
 
 After building:
 
-1. Install APK on Android device/emulator
-2. Test widget rendering
-3. Verify configuration options work
+1. Upload APK to Lumy Manager → Custom Widgets
+2. Fill in widget details (name, version, class name, permissions)
+3. Add to playlist/layout
+4. Test on Android player device
 
 ## Sharing Your Widget
 
@@ -148,7 +204,11 @@ After building:
 
 1. **Build your APK:**
    ```bash
-   ./gradlew :app:assembleRelease
+   # Windows
+   .\build-widget.bat
+   
+   # Linux/Mac
+   ./build-widget.sh
    ```
 
 2. **Tag and create release:**
@@ -160,21 +220,25 @@ After building:
 3. **On GitHub:**
    - Go to Releases → Create new release
    - Select tag `v1.0.0`
-   - Upload `app/build/outputs/apk/release/app-release.apk`
-   - Add release notes
+   - Upload the APK file (e.g., `my-widget-v1.0.0.apk`)
+   - Add release notes describing features
    - Publish
 
 ### Repository Setup
 
-1. Create a repository in the `lumy-widgets` organization
+1. Create a repository in the `lumy-signage` organization (or your account)
 2. Include:
    - Source code
-   - `README.md` with description
+   - `README.md` with description, screenshots, build instructions
    - `widget-metadata.json`
-   - Screenshots
-   - **GitHub Release with APK file**
+   - `.gitignore` (from template)
+   - Screenshots or demo GIFs
+   - **GitHub Release with APK file** ✨
 
-3. Submit PR to add to organization README
+3. Submit PR to add to organization README, or open an issue to request listing
 
-For complete documentation, see the [full development guide](https://github.com/lumy-widgets/lumy-widget-hello-world/blob/main/README.md) and [Contributing Guide](https://github.com/lumy-widgets/.github/blob/main/CONTRIBUTING.md).
+For complete documentation, see:
+- [Widget Template README](https://github.com/lumy-signage/lumy-widget-template/blob/main/README.md)
+- [Contributing Guide](https://github.com/lumy-signage/.github/blob/main/CONTRIBUTING.md)
+- [Main Project Documentation](https://github.com/lumyproject/lumy/tree/main/docs/widgets)
 
